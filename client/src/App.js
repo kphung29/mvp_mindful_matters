@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 
-import MoodForm from './components/MoodForm';
+import Navigation from './components/Navigation';
+import Chart from './components/Chart';
 
 class App extends Component {
 
-    render() {
-      return (
-        <div className="App">
-          <h1>Welcome to Mindful Matters!</h1>
-          <img src="https://i.imgur.com/Vjft5Im.png" width="20%" />
-          <MoodForm />
-        </div>
-      );
-    }
+  render() {
+    return (
+      <div className="App">
+        <h1>Welcome to Mindful Matters!</h1>
+        <hr></hr>
+        {/* <Navigation /> */}
+        <Chart />
+      </div>
+    );
   }
+}
 
-  export default App;
+export default App;

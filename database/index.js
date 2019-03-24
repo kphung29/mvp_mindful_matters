@@ -16,13 +16,13 @@ const date = new Date();
 const newDate = date.toDateString();
 
 const userSchema = mongoose.Schema({
-  user_name: String,
+  userName: String,
   password: String,
   email: String,
   mood: String,
-  mood_count: Number,
+  moodCount: Number,
   activity: String,
-  daily_entry: String,
+  dailyEntry: String,
   date: { type: String, default: newDate },
 });
 
