@@ -5,6 +5,10 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class MoodEntry extends Component {
+  constructor(props) {
+    super(props);
+    this.continue = this.continue.bind(this);
+  }
 
   continue(e) {
     e.preventDefault();
@@ -22,21 +26,24 @@ class MoodEntry extends Component {
             hintText="Mood"
             floatingLabelText="How're you feeling?"
             onChange={handleChange}
-            defaultValue={values.mood}
+            name='mood'
+            value={values.mood}
           />
           <br />
           <TextField
             hintText="Activities"
             floatingLabelText="Activities?"
             onChange={handleChange}
-            defaultValue={values.activities}
+            name='activity'
+            value={values.activity}
           />
           <br />
           <TextField
             hintText="Entry"
             floatingLabelText="Entry"
             onChange={handleChange}
-            defaultValue={values.dailyEntry}
+            name='dailyEntry'
+            value={values.dailyEntry}
           />
           <br />
           <RaisedButton

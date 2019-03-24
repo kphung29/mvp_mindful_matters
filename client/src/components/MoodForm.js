@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import MoodEntry from './MoodEntry';
+import Activities from './Activities';
 
 class MoodForm extends Component {
     constructor(props) {
@@ -63,13 +64,12 @@ class MoodForm extends Component {
           );
         case 2:
           return (
-            // <Activities
-            //   nextStep={this.nextStep}
-            //   previousStep={this.previousStep}
-            //   handleChange={this.handleChange}
-            //   values={values}
-            // />
-            <h1>hello from activities</h1>
+            <Activities
+              nextStep={this.nextStep}
+              previousStep={this.previousStep}
+              handleChange={this.handleChange}
+              values={values}
+            />
           );
         case 3:
           return (
