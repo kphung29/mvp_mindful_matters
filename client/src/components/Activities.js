@@ -6,6 +6,12 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class Activities extends Component {
+  constructor(props) {
+    super(props);
+
+    this.continue = this.continue.bind(this);
+    this.back = this.back.bind(this);
+  }
 
   continue(e) {
     e.preventDefault();
@@ -14,7 +20,7 @@ class Activities extends Component {
 
   back(e){
     e.preventDefault();
-    this.props.prevStep();
+    this.props.previousStep();
   };
 
   render() {

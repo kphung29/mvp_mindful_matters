@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import MoodEntry from './MoodEntry';
 import Activities from './Activities';
+import NoteEntry from './NoteEntry';
+import Confirm from './Confirm';
+import Success from './Success';
+
 
 class MoodForm extends Component {
     constructor(props) {
@@ -73,33 +77,30 @@ class MoodForm extends Component {
           );
         case 3:
           return (
-            // <NoteEntry
-            //   nextStep={this.nextStep}
-            //   previousStep={this.previousStep}
-            //   values={values}
-            // />
-            <h1>hello from note entry</h1>
+            <NoteEntry
+              nextStep={this.nextStep}
+              previousStep={this.previousStep}
+              values={values}
+            />
           );
         case 4:
           return (
-            // <Confirm
-            //   nextStep={this.nextStep}
-            //   previousStep={this.previousStep}
-            //   values={values}
-            // />
-            <h1>confirmation</h1>
+            <Confirm
+              nextStep={this.nextStep}
+              previousStep={this.previousStep}
+              values={values}
+            />
           );
           case 5:
           return (
-            // <Success
-            //   nextStep={this.nextStep}
-            //   previousStep={this.previousStep}
-            //   values={values}
-            // />
-            <h1>success!</h1>
+            <Success
+              nextStep={this.nextStep}
+              previousStep={this.previousStep}
+              values={values}
+            />
           );
       }
-  }
+    }
 }
 
   export default MoodForm;

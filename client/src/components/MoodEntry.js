@@ -7,6 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 class MoodEntry extends Component {
   constructor(props) {
     super(props);
+
     this.continue = this.continue.bind(this);
   }
 
