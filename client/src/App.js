@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import MoodForm from './components/MoodForm';
+import MoodModal from './components/MoodModal';
 
 class App extends Component {
 
@@ -8,8 +8,8 @@ class App extends Component {
       return (
         <div className="App">
           <h1>Welcome to Mindful Matters!</h1>
-          <img src="https://i.imgur.com/Vjft5Im.png" width="20%" />
-          <MoodForm />
+          <hr></hr>
+          <MoodModal />
         </div>
       );
     }
