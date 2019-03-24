@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Icon, Image, Modal, Form, Message } from 'semantic-ui-react';
 
-import App from '../App';
-
 class MoodModal extends Component {
   constructor(props) {
     super(props);
