@@ -6,11 +6,12 @@ class MoodForm extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        step: 5,
+        step: 1,
         mood: '',
         dailyEntry: '',
         activity: '',
         moodCount: 0,
+        users: [],
       };
       this.nextStep = this.nextStep.bind(this);
       this.previousStep = this.previousStep.bind(this);
@@ -48,14 +49,9 @@ class MoodForm extends Component {
 
     render() {
       const { step } = this.state;
-      const { mood, moodCount, activity, dailyEntry } = this.state;
+      const { mood, moodCount, activity, dailyEntry, users } = this.state;
       const values = { mood, moodCount, activity, dailyEntry};
 
-      // if (step === 1) {
-      //   return (
-      //     <MoodEntry />
-      //   )
-      // }
       switch (step) {
         case 1:
           return (
@@ -67,30 +63,40 @@ class MoodForm extends Component {
           );
         case 2:
           return (
-            // <FormPersonalDetails
+            // <Activities
             //   nextStep={this.nextStep}
-            //   prevStep={this.prevStep}
+            //   previousStep={this.previousStep}
             //   handleChange={this.handleChange}
             //   values={values}
             // />
-            <h1>This is Activities</h1>
+            <h1>hello from activities</h1>
           );
         case 3:
           return (
-            // <Confirm
+            // <NoteEntry
             //   nextStep={this.nextStep}
-            //   prevStep={this.prevStep}
+            //   previousStep={this.previousStep}
             //   values={values}
             // />
-            <h1>This is DailyEntries</h1>
+            <h1>hello from note entry</h1>
           );
         case 4:
           return (
-            <h1>This is Confirm</h1>
+            // <Confirm
+            //   nextStep={this.nextStep}
+            //   previousStep={this.previousStep}
+            //   values={values}
+            // />
+            <h1>confirmation</h1>
           );
-        case 5:
+          case 5:
           return (
-            <h1>Success</h1>
+            // <Success
+            //   nextStep={this.nextStep}
+            //   previousStep={this.previousStep}
+            //   values={values}
+            // />
+            <h1>success!</h1>
           );
       }
   }
