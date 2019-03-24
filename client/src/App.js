@@ -6,7 +6,7 @@ class App extends Component {
 
     render() {
       return (
-        <div className="container-fluid">
+        <div className="App">
           <h1>Welcome to Mindful Matters!</h1>
           <img src="https://i.imgur.com/Vjft5Im.png" width="20%" />
           <MoodForm />
