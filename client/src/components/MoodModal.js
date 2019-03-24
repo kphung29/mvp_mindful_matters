@@ -8,12 +8,9 @@ class MoodModal extends Component {
     super(props);
     this.state = {
       open: false,
-      step: 1,
       mood: '',
       dailyEntry: '',
       activity: '',
-      moodCount: 0,
-      users: [],
     }
 
     this.open = this.open.bind(this);
@@ -92,15 +89,6 @@ class MoodModal extends Component {
     .catch(err => {
       console.log(err);
     });
-  }
-
-  componentDidMount() {
-    fetch('/posts')
-    .then(res => res.json())
-    .then(data => this.setState({
-      users: data,
-    }))
-    .catch(err => console.log(err));
   }
 
   render() {
