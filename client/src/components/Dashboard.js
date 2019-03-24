@@ -1,9 +1,13 @@
 import React from "react";
 
-const Dashboard = (props) => {
+import MoodModal from './MoodModal';
+import Chart from './Chart';
+
+const Dashboard = () => {
   return (
     <div>
-      <h1>Hi this is Dashboard!</h1>
+      <MoodModal />
+      <Chart />
     </div>
   )
 }

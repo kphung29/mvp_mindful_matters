@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Navigation from './components/Navigation';
-import MoodHistory from './components/MoodHistory';
+import Chart from './components/Chart';
 
-const App = () => {
+class App extends Component {
 
-  return (
-    <div className="App">
-      <h1>Welcome to Mindful Matters!</h1>
-      <hr></hr>
-      {/* <Navigation props={props}/> */}
-      <MoodHistory />
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <h1>Welcome to Mindful Matters!</h1>
+        <hr></hr>
+        {/* <Navigation /> */}
+        <Chart />
+      </div>
+    );
+  }
 }
 
-
-  export default App;
+export default App;
