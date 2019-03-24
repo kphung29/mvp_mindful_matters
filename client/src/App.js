@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import MoodModal from './components/MoodModal';
+import Navigation from './components/Navigation';
 
-class App extends Component {
+const App = (props) => {
 
-    render() {
-      return (
-        <div className="App">
-          <h1>Welcome to Mindful Matters!</h1>
-          <hr></hr>
-          <MoodModal />
-        </div>
-      );
-    }
-  }
+  return (
+    <div className="App">
+      <h1>Welcome to Mindful Matters!</h1>
+      <hr></hr>
+      <Navigation props={props}/>
+    </div>
+  );
+}
+
 
   export default App;
