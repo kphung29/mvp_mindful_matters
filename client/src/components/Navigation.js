@@ -12,7 +12,7 @@ const Navigation = () => {
     return (
       <Router>
         <div>
-          <Menu pointing size="massive">
+          <Menu inverted pointing size="massive" widths={6}>
           <Menu.Item as={ Link } to='/'>Home</Menu.Item>
             <Menu.Item as={ Link } to='/dashboard'>Dashboard</Menu.Item>
             <Menu.Item as={ Link } to='/mood'>Add Entry</Menu.Item>

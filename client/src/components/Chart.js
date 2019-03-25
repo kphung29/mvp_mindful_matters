@@ -7,16 +7,17 @@ class Chart extends Component {
     this.state = {
       users: [],
       chartData: {
-        labels: ['great', 'good', 'ok', 'sad', 'really sad'],
+        labels: ['happy', 'good', 'so-so', 'anxious', 'sad', 'angry'],
         datasets: [
           {
             label: 'Moods',
             data: [
               4,
               2,
-              5,
               2,
               3,
+              2,
+              1
             ],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
@@ -61,6 +62,13 @@ class Chart extends Component {
               display: true,
               position: 'right',
             },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
           }}
         />
         <br />
@@ -70,7 +78,7 @@ class Chart extends Component {
           height={15}
           width={15}
           data={{
-            labels: ['great', 'good', 'ok', 'sad', 'really sad'],
+            labels: ['happy', 'good', 'so-so', ,'anxious', 'sad'],
             datasets: [
               {
                 label: 'Moods',
@@ -82,7 +90,8 @@ class Chart extends Component {
                   2,
                   2,
                   3,
-                  2
+                  2,
+                  1,
                 ]
               }
             ]
@@ -94,6 +103,13 @@ class Chart extends Component {
               display: true,
               position: 'right',
             },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
           }}
         />
       </div>

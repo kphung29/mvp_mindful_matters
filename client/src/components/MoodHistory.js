@@ -21,9 +21,9 @@ class MoodHistory extends Component {
     const { users } = this.state;
     return (
       <div>
-        <h1>Mood History</h1>
+        <h1 style={{ paddingLeft: 20 }}>Mood History</h1>
         {users.map(user =>
-        <List key={user._id} size="massive">
+        <List key={user._id} size="massive" style={{ paddingLeft: 20 }}>
         <List.Item>
           <List.Icon name='calendar alternate outline' />
           <List.Content>{user.date}</List.Content>
