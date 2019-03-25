@@ -61,6 +61,13 @@ class Chart extends Component {
               display: true,
               position: 'right',
             },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
           }}
         />
         <br />
@@ -94,6 +101,13 @@ class Chart extends Component {
               display: true,
               position: 'right',
             },
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true
+                }
+              }]
+            }
           }}
         />
       </div>

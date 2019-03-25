@@ -21,7 +21,6 @@ class HomePageHeader extends Component {
 
   render() {
     return (
-
     <Segment inverted padded='very'>
       <Header
         as='h1'
