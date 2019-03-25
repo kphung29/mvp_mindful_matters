@@ -77,11 +77,12 @@ class MoodModal extends Component {
     const { open } = this.state
     const { dailyEntry, activity } = this.state
     const options = [
-      { key: 'great', text: 'great', value: 'great' },
+      { key: 'happy', text: 'happy', value: 'happy' },
       { key: 'good', text: 'good', value: 'good' },
-      { key: 'ok', text: 'ok', value: 'ok' },
+      { key: 'so-so', text: 'so-so', value: 'so-so' },
+      { key: 'anxious', text: 'anxious', value: 'anxious' },
       { key: 'sad', text: 'sad', value: 'sad' },
-      { key: 'really sad', text: 'really sad', value: 'really sad' },
+      { key: 'angry', text: 'angry', value: 'angry' },
     ];
 
     return (
