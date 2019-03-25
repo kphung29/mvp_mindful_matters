@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, GridColumn, GridRow } from 'semantic-ui-react';
-import { Bar, Pie } from 'react-chartjs-2';
+import { Pie, Bar } from 'react-chartjs-2';
 
 class Chart extends Component {
   constructor(props) {
@@ -81,51 +81,6 @@ class Chart extends Component {
               }
             }}
           />
-        {/* <Line
-          height={450}
-          width={450}
-          data={{
-            labels: ['happy', 'good', 'so-so', ,'anxious', 'sad', 'angry'],
-            datasets: [
-              {
-                label: 'Moods',
-                fill: false,
-                lineTension: 0,
-                borderColor: 'rgb(100,149,237',
-                backgroundColor: 'rgb(255,250,250)',
-                data: [
-                 happyCount,
-                 goodCount,
-                 soSoCount,
-                 anxiousCount,
-                 sadCount,
-                 angryCount
-                ]
-              }
-            ]
-          }}
-          options={{
-            responsive: true,
-            maintainAspectRatio: false,
-            title: {
-              display: true,
-              text: 'Mood Analytics',
-              fontColor: 'black',
-              fontSize: 45,
-            },
-            legend: {
-              display: true,
-              position: 'right',
-            },
-            scales: {
-              yAxes: [{
-                ticks: {
-                  beginAtZero: true
-                }
-              }]
-            }
-          }}
-          /> */}
           </GridColumn>
           <GridColumn width={16}>
           <Bar
