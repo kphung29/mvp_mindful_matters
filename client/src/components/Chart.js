@@ -12,11 +12,11 @@ class Chart extends Component {
           {
             label: 'Moods',
             data: [
-              1,
               4,
               2,
-              3,
+              5,
               2,
+              3,
             ],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
@@ -47,9 +47,10 @@ class Chart extends Component {
       <div className="chart">
         <Bar
           data={chartData}
-          width={125}
-          height={125}
+          height={15}
+          width={15}
           options={{
+            responsive: true,
             maintainAspectRatio: false,
             title: {
               display: true,
@@ -63,7 +64,11 @@ class Chart extends Component {
           }}
         />
         <br />
+        <br />
+        <hr />
         <Line
+          height={15}
+          width={15}
           data={{
             labels: ['great', 'good', 'ok', 'sad', 'really sad'],
             datasets: [
@@ -73,7 +78,6 @@ class Chart extends Component {
                 borderColor: 'rgb(100,149,237',
                 backgroundColor: 'rgb(255,250,250)',
                 data: [
-                  1,
                   4,
                   2,
                   2,
@@ -83,9 +87,8 @@ class Chart extends Component {
               }
             ]
           }}
-          width={30}
-          height={30}
           options={{
+            responsive: true,
             maintainAspectRatio: false,
             legend: {
               display: true,
