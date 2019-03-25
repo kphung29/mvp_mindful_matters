@@ -22,13 +22,13 @@ const HomePage = () => {
      <Grid container stackable verticalAlign='middle' style={{ height: '100vh'}}>
        <Grid.Row>
          <Grid.Column width={8}>
-           <Header as='h3' style={{ fontSize: '3em', paddingTop: '50' }}>
+           <Header as='h3' style={{ fontSize: '3em', paddingTop: '50' }} textAlign='center'>
            Keep track of your well-being!
            </Header>
            <p style={{ fontSize: '1.4em' }}>
            Here, you can log your daily mood,  activities, and any notes you want to jot down.    Your account is private and you'll be able to keep track of the common moods and habits to better understand how you're feeling and the potential triggers that can affect your mood.
            </p>
-           <Header as='h3' style={{ fontSize: '2em' }}>
+           <Header as='h3' style={{ fontSize: '2em' }} textAlign='center'>
              Look for mood patterns and gain better insight to your daily routines!
            </Header>
            <p style={{ fontSize: '1.4em' }}>
@@ -44,16 +44,16 @@ const HomePage = () => {
    <Segment style={{ padding: '0em' }} vertical>
      <Grid celled='internally' columns='equal' stackable>
        <Grid.Row textAlign='center'>
-         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-           <Header as='h3' style={{ fontSize: '2em' }}>
+         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }} color='black'>
+           <Header as='h3' style={{ fontSize: '2em' }} inverted color='grey'>
              "Thanks to Mindful Matters, I am less stressed and spending more time with my baby!"
            </Header>
            <p style={{ fontSize: '1.33em' }}>
             <b>Randy Thomas</b> Newbie Father
           </p>
          </Grid.Column>
-         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-           <Header as='h3' style={{ fontSize: '2em' }}>
+         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }} color='black'>
+           <Header as='h3' style={{ fontSize: '2em' }} inverted color='grey'>
              "I am more conscious about exercising instead of watching Youtube videos."
            </Header>
            <p style={{ fontSize: '1.33em' }}>
@@ -65,7 +65,7 @@ const HomePage = () => {
    </Segment>
    <Segment style={{ padding: '8em 0em' }} vertical>
      <Container text>
-       <Header as='h3' style={{ fontSize: '2em' }}>
+       <Header as='h3' style={{ fontSize: '2em' }} textAlign='center'>
          Snapshot of a daily entry
        </Header>
        <hr/>
@@ -76,17 +76,19 @@ const HomePage = () => {
          horizontal
          style={{ margin: '3em 0em', textTransform: 'uppercase' }}
        >
-         <a href='#'>Data Analytics</a>
+         <a href='#'>Case Study</a>
        </Divider>
-       <Header as='h3' style={{ fontSize: '2em' }}>
+       <Header as='h3' style={{ fontSize: '2em' }} textAlign='center'>
          Created by Health Professionals
        </Header>
        <p style={{ fontSize: '1.33em' }}>
-       Mood diary is frequently offered by psychologists and therapists to help us discover facts about ourselves that otherwise slip our attention. You may experience a diagnosed condition like bipolar, OCD, depression, etc. Or you may want to track symptoms of PMS, IMS, PMDD, PPD, etc.
+       Mood diaries are frequently recommended by psychologists and therapists to help us discover facts about ourselves that otherwise may slip our attention.  It is recommended to submit mood entries 2-3 times a day.
        </p>
-       <Button as='a' size='large'>
+       <Container textAlign='center'>
+       <Button primary as='a' size='massive'>
          Join Now
        </Button>
+       </Container>
      </Container>
    </Segment>
    <Segment inverted vertical style={{ padding: '5em 0em' }}>

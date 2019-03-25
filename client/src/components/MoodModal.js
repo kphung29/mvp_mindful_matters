@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Icon, Image, Modal, Form, Message } from 'semantic-ui-react';
+import { Button, Icon, Image, Modal, Form, Message, Container } from 'semantic-ui-react';
 
 class MoodModal extends Component {
   constructor(props) {
@@ -86,6 +86,7 @@ class MoodModal extends Component {
     ];
 
     return (
+      <Container>
       <Modal
       open={open}
         onOpen={this.open}
@@ -131,6 +132,20 @@ class MoodModal extends Component {
             onChange={this.handleActivitySelect}
           />
           <Form.Radio
+            label='coding'
+            name='coding'
+            value='coding'
+            checked={activity === 'coding'}
+            onChange={this.handleActivitySelect}
+          />
+           <Form.Radio
+            label='movies'
+            name='movies'
+            value='movies'
+            checked={activity === 'movies'}
+            onChange={this.handleActivitySelect}
+          />
+          <Form.Radio
             label='reading'
             name='reading'
             value='reading'
@@ -145,10 +160,10 @@ class MoodModal extends Component {
             onChange={this.handleActivitySelect}
           />
           <Form.Radio
-            label='went on date'
-            name='went on date'
-            value='went on date'
-            checked={activity === 'went on date'}
+            label='date night'
+            name='date night'
+            value='date night'
+            checked={activity === 'date night'}
             onChange={this.handleActivitySelect}
           />
         </Form.Group>
@@ -161,6 +176,7 @@ class MoodModal extends Component {
           <Button icon='check' content='All Done' onClick={this.close} />
         </Modal.Actions>
       </Modal>
+      </Container>
     )
   }
 }
