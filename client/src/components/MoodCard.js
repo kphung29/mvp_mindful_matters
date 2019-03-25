@@ -4,7 +4,7 @@ import { Card, Icon, Image, Grid } from 'semantic-ui-react'
 const MoodCard = (props) => (
   <Grid textAlign='center'>
   <Card>
-    <Image src='https://i.imgur.com/wquVArW.jpg' />
+    <Image src='https://s3.amazonaws.com/moodappmvp/profile.jpg' />
     <Card.Content>
       <Card.Header>Kevin</Card.Header>
       <Card.Meta>Joined in 2019</Card.Meta>
