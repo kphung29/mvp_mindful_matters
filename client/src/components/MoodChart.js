@@ -21,11 +21,12 @@ class Chart extends Component {
               1
             ],
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
+              "#585858",
+              "#3e95cd",
+              "#8e5ea2",
+              "#3cba9f",
+              "#e8c3b9",
+              "#c45850"
             ],
           },
         ],
@@ -56,6 +57,7 @@ class Chart extends Component {
             datasets: [
               {
                 label: 'Moods',
+                fill: false,
                 lineTension: 0,
                 borderColor: 'rgb(100,149,237',
                 backgroundColor: 'rgb(255,250,250)',
@@ -76,6 +78,7 @@ class Chart extends Component {
             title: {
               display: true,
               text: 'Mood Analytics',
+              fontColor: 'black',
               fontSize: 45,
             },
             legend: {
