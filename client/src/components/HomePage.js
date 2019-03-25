@@ -36,7 +36,7 @@ const HomePage = () => {
            </p>
          </Grid.Column>
          <GridColumn width={8}>
-           <Image src="https://avbfb.org/wp-content/uploads/2019/02/Concept-mental-health.png" size='massive' />
+           <Image src="https://s3.amazonaws.com/moodappmvp/mind.png" size='massive' />
          </GridColumn>
        </Grid.Row>
      </Grid>
@@ -69,7 +69,7 @@ const HomePage = () => {
          Snapshot of a daily entry
        </Header>
        <hr/>
-       <Image src="https://i.imgur.com/phjdDX4.png?2" />
+       <Image src="https://s3.amazonaws.com/moodappmvp/mood.png" />
        <Divider
          as='h4'
          className='header'

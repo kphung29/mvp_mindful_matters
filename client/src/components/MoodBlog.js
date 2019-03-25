@@ -5,7 +5,7 @@ const MoodBlog = () => (
   <Grid celled>
   <Grid.Row>
     <Grid.Column width={3}>
-      <Image src='https://cdn.shopify.com/s/files/1/1728/2157/articles/4.jpg?v=1552669333' />
+      <Image src='https://s3.amazonaws.com/moodappmvp/meditation.jpg' />
     </Grid.Column>
     <Grid.Column width={13}>
       <Header as='h2'>
@@ -50,7 +50,7 @@ Maintain this meditation practice for two to three minutes to start, and then tr
   </Grid.Row>
   <Grid.Row>
     <Grid.Column width={3}>
-      <Image src='https://images.agoramedia.com/everydayhealth/gcms/Amazing-Benefits-of-Exercise-01-722x406.jpg' />
+      <Image src='https://s3.amazonaws.com/moodappmvp/fitness.jpg' />
     </Grid.Column>
     <Grid.Column width={13}>
       <Header as='h2'>
@@ -74,7 +74,7 @@ So what are some of the many ways exercise can benefit your health? Read on to l
   </Grid.Row>
   <Grid.Row>
     <Grid.Column width={3}>
-      <Image src='https://media.self.com/photos/586540bc733664ae3e5ee9f8/4:3/w_752,c_limit/eat-healthy_feature.png' />
+      <Image src='https://s3.amazonaws.com/moodappmvp/food.png' />
     </Grid.Column>
     <Grid.Column width={13}>
       <Header as='h2'>
