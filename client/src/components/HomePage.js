@@ -46,18 +46,18 @@ const HomePage = () => {
        <Grid.Row textAlign='center'>
          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }} color='black'>
            <Header as='h3' style={{ fontSize: '2em' }} inverted color='grey'>
-             "Thanks to Mindful Matters, I am less stressed and spending more time with my baby!"
+             "Thanks to Mindful Matters, I am balancing my work and social life."
            </Header>
            <p style={{ fontSize: '1.33em' }}>
-            <b>Randy Thomas</b> Newbie Father
+            <b>David Smith</b>
           </p>
          </Grid.Column>
          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }} color='black'>
            <Header as='h3' style={{ fontSize: '2em' }} inverted color='grey'>
-             "I am more conscious about exercising instead of watching Youtube videos."
+             "I review my mood history and it helps me reprioritize my goals for the week."
            </Header>
            <p style={{ fontSize: '1.33em' }}>
-             <b>Joe Boulos</b> Software Engineer
+             <b>Cole Andrews</b>, Software Engineer
            </p>
          </Grid.Column>
        </Grid.Row>

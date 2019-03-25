@@ -56,6 +56,7 @@ class Chart extends Component {
             datasets: [
               {
                 label: 'Moods',
+                fill: false,
                 lineTension: 0,
                 borderColor: 'rgb(100,149,237',
                 backgroundColor: 'rgb(255,250,250)',
@@ -76,6 +77,7 @@ class Chart extends Component {
             title: {
               display: true,
               text: 'Mood Analytics',
+              fontColor: 'black',
               fontSize: 45,
             },
             legend: {
