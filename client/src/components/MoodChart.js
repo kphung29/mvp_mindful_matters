@@ -1,36 +1,12 @@
 import React, { Component } from 'react';
 import { Grid, GridColumn, GridRow } from 'semantic-ui-react';
-import { Bar, Line } from 'react-chartjs-2';
+import { Pie, Bar } from 'react-chartjs-2';
 
 class Chart extends Component {
   constructor(props) {
     super(props);
     this.state = {
       users: [],
-      chartData: {
-        labels: ['happy', 'good', 'so-so', 'anxious', 'sad', 'angry'],
-        datasets: [
-          {
-            label: 'Moods',
-            data: [
-              4,
-              2,
-              2,
-              3,
-              2,
-              1
-            ],
-            backgroundColor: [
-              "#585858",
-              "#3e95cd",
-              "#8e5ea2",
-              "#3cba9f",
-              "#e8c3b9",
-              "#c45850"
-            ],
-          },
-        ],
-      },
     };
   }
 
@@ -44,60 +20,94 @@ class Chart extends Component {
   }
 
   render() {
-    const { chartData } = this.state;
+    const { users } = this.state;
+    const happyMood = users.filter(mood => mood.mood === 'happy');
+    const happyCount = happyMood.length;
+    const goodMood = users.filter(mood => mood.mood === 'good');
+    const goodCount = goodMood.length;
+    const soSoMood = users.filter(mood => mood.mood === 'so-so');
+    const soSoCount = soSoMood.length;
+    const anxiousMood = users.filter(mood => mood.mood === 'anxious');
+    const anxiousCount = anxiousMood.length;
+    const sadMood = users.filter(mood => mood.mood === 'sad');
+    const sadCount = sadMood.length;
+    const angryMood = users.filter(mood => mood.mood === 'angry');
+    const angryCount = angryMood.length;
+
     return (
       <Grid>
       <GridRow>
         <GridColumn width={16}>
-        <Line
-          height={450}
-          width={450}
-          data={{
-            labels: ['happy', 'good', 'so-so', ,'anxious', 'sad'],
-            datasets: [
-              {
-                label: 'Moods',
-                fill: false,
-                lineTension: 0,
-                borderColor: 'rgb(100,149,237',
-                backgroundColor: 'rgb(255,250,250)',
-                data: [
-                  4,
-                  2,
-                  2,
-                  3,
-                  2,
-                  1,
-                ]
+        <Pie
+            data={{
+              labels: ['happy', 'good', 'so-so', 'anxious', 'sad', 'angry'],
+              datasets: [
+                {
+                  label: 'Moods',
+                  data: [
+                    happyCount,
+                    goodCount,
+                    soSoCount,
+                    anxiousCount,
+                    sadCount,
+                    angryCount
+                  ],
+                  backgroundColor: [
+                    "#585858",
+                    "#3e95cd",
+                    "#8e5ea2",
+                    "#3cba9f",
+                    "#e8c3b9",
+                    "#c45850"
+                  ],
+                },
+              ],
+            }}
+            height={450}
+            width={450}
+            options={{
+              responsive: true,
+              maintainAspectRatio: false,
+              legend: {
+                display: true,
+                position: 'right',
+              },
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }]
               }
-            ]
-          }}
-          options={{
-            responsive: true,
-            maintainAspectRatio: false,
-            title: {
-              display: true,
-              text: 'Mood Analytics',
-              fontColor: 'black',
-              fontSize: 45,
-            },
-            legend: {
-              display: true,
-              position: 'right',
-            },
-            scales: {
-              yAxes: [{
-                ticks: {
-                  beginAtZero: true
-                }
-              }]
-            }
-          }}
+            }}
           />
           </GridColumn>
           <GridColumn width={16}>
           <Bar
-            data={chartData}
+            data={{
+              labels: ['happy', 'good', 'so-so', 'anxious', 'sad', 'angry'],
+              datasets: [
+                {
+                  label: 'Moods',
+                  data: [
+                    happyCount,
+                    goodCount,
+                    soSoCount,
+                    anxiousCount,
+                    sadCount,
+                    angryCount
+                  ],
+                  backgroundColor: [
+                    "#585858",
+                    "#3e95cd",
+                    "#8e5ea2",
+                    "#3cba9f",
+                    "#e8c3b9",
+                    "#c45850"
+                  ],
+                },
+              ],
+            }}
             height={450}
             width={450}
             options={{

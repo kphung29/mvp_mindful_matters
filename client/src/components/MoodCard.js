@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Icon, Image, Grid } from 'semantic-ui-react'
 
-const MoodCard = () => (
+const MoodCard = (props) => (
   <Grid textAlign='center'>
   <Card>
     <Image src='https://i.imgur.com/wquVArW.jpg' />
@@ -13,7 +13,7 @@ const MoodCard = () => (
     <Card.Content extra>
       <a>
         <Icon name='book' />
-        10 Mood Daily Entries
+        {props.users.length} Total Mood Entries
       </a>
     </Card.Content>
   </Card>
