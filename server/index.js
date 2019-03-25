@@ -10,6 +10,8 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
+
+
 app.get('/posts', (req, res) => {
   if (!req.body) {
     console.log('Not Found');
@@ -21,13 +23,17 @@ app.get('/posts', (req, res) => {
         res.send(data);
       }
     })
-      .limit(100)
-      .sort({ _id: -1 })
-      .catch((err) => {
-        console.log(err);
-      });
+    .limit(100)
+    .sort({ _id: -1 })
+    .catch((err) => {
+      console.log(err);
+    });
   }
 });
+
+app.get('/*', (req, res) => {
+  res.redirect('/')
+})
 
 app.post('/addPost', (req, res) => {
   if (!req.body) {

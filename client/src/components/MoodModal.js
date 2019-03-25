@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Icon, Image, Modal, Form, Message } from 'semantic-ui-react';
 
-import App from '../App';
-
 class MoodModal extends Component {
   constructor(props) {
     super(props);
@@ -15,8 +13,6 @@ class MoodModal extends Component {
 
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
-    this.nextStep = this.nextStep.bind(this);
-    this.previousStep = this.previousStep.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.handleActivitySelect = this.handleActivitySelect.bind(this);
@@ -32,20 +28,6 @@ class MoodModal extends Component {
   close() {
     this.setState({
       open: false
-    });
-  }
-
-  nextStep() {
-    const { step } = this.state;
-    this.setState({
-      step: step + 1
-    });
-  }
-
-  previousStep() {
-    const { step } = this.state;
-    this.setState({
-      step: step + 1
     });
   }
 
