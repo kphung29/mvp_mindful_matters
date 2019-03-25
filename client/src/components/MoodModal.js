@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Icon, Image, Modal, Form, Message, Container } from 'semantic-ui-react';
+import { Button, Icon, Image, Modal, Form, Message, Container, Grid } from 'semantic-ui-react';
 
 class MoodModal extends Component {
   constructor(props) {
@@ -65,12 +65,15 @@ class MoodModal extends Component {
     })
     .then(res =>
       res.json())
-    .then(data => {
-      console.log(`this is data: ${data}`);
-    })
-    .catch(err => {
-      console.log(err);
-    });
+      .then(data => {
+        console.log(`this is data: ${data}`);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+    return (
+      <Message success header="Daily Entry Saved!" content="Check the dashboard for your progress!"/>
+    )
   }
 
   render() {
@@ -86,6 +89,8 @@ class MoodModal extends Component {
     ];
 
     return (
+
+      <Grid>
       <Container>
       <Modal
       open={open}
@@ -93,7 +98,7 @@ class MoodModal extends Component {
         onClose={this.close}
         size='large'
         trigger={
-          <Button primary icon>
+          <Button secondary icon size='massive'>
             Enter Mood for Today <Icon name='right chevron' />
           </Button>
         }
@@ -168,7 +173,7 @@ class MoodModal extends Component {
           />
         </Form.Group>
         <Form.TextArea label='Daily Entry' name='dailyEntry' value={dailyEntry} onChange= {this.handleChange} placeholder={`Any thoughts you'd like to share?`} required />
-        <Message success header="Daily Entry Saved!" content="Check the dashboard for your progress!"/>
+        {/* <Message success header="Daily Entry Saved!" content="Check the dashboard for your progress!"/> */}
         <Form.Button onClick={this.handleSubmit}>Submit</Form.Button>
       </Form>
         </Modal.Content>
@@ -177,6 +182,7 @@ class MoodModal extends Component {
         </Modal.Actions>
       </Modal>
       </Container>
+      </Grid>
     )
   }
 }
