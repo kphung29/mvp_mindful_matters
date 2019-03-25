@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List } from 'semantic-ui-react';
+import { List, Segment } from 'semantic-ui-react';
 
 class MoodHistory extends Component {
   constructor(props) {
@@ -20,10 +20,11 @@ class MoodHistory extends Component {
   render() {
     const { users } = this.state;
     return (
+      <Segment inverted>
       <div>
         <h1 style={{ paddingLeft: 20 }}>Mood History</h1>
         {users.map(user =>
-        <List key={user._id} size="massive" style={{ paddingLeft: 20 }}>
+        <List key={user._id} size="massive" style={{ paddingLeft: 20 }} inverted>
         <List.Item>
           <List.Icon name='calendar alternate outline' />
           <List.Content>{user.date}</List.Content>
@@ -44,6 +45,7 @@ class MoodHistory extends Component {
         </List>
         )}
       </div>
+      </Segment>
     )
   }
 }

@@ -57,7 +57,7 @@ const HomePage = () => {
              "I review my mood history and it helps me reprioritize my goals for the week."
            </Header>
            <p style={{ fontSize: '1.33em' }}>
-             <b>Cole Andrews</b>, Software Engineer
+             <b>Cole Andrews</b>
            </p>
          </Grid.Column>
        </Grid.Row>
