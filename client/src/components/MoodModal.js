@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Icon, Image, Modal, Form, Message, Container, Grid } from 'semantic-ui-react';
+import { Button, Icon, Image, Modal, Form, Container, Grid } from 'semantic-ui-react';
 
 class MoodModal extends Component {
   constructor(props) {
@@ -71,9 +71,6 @@ class MoodModal extends Component {
       .catch(err => {
         console.log(err);
       });
-    return (
-      <Message success header="Daily Entry Saved!" content="Check the dashboard for your progress!"/>
-    )
   }
 
   render() {
@@ -158,13 +155,27 @@ class MoodModal extends Component {
             onChange={this.handleActivitySelect}
           />
            <Form.Radio
+            label='studying'
+            name='studying'
+            value='studying'
+            checked={activity === 'studying'}
+            onChange={this.handleActivitySelect}
+          />
+           <Form.Radio
             label='meditation'
             name='meditation'
             value='meditation'
             checked={activity === 'meditation'}
             onChange={this.handleActivitySelect}
           />
-          <Form.Radio
+            <Form.Radio
+            label='restaurant'
+            name='restaurant'
+            value='restaurant'
+            checked={activity === 'restaurant'}
+            onChange={this.handleActivitySelect}
+          />
+            <Form.Radio
             label='date night'
             name='date night'
             value='date night'
@@ -173,7 +184,6 @@ class MoodModal extends Component {
           />
         </Form.Group>
         <Form.TextArea label='Daily Entry' name='dailyEntry' value={dailyEntry} onChange= {this.handleChange} placeholder={`Any thoughts you'd like to share?`} required />
-        {/* <Message success header="Daily Entry Saved!" content="Check the dashboard for your progress!"/> */}
         <Form.Button onClick={this.handleSubmit}>Submit</Form.Button>
       </Form>
         </Modal.Content>

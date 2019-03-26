@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, GridColumn, GridRow } from 'semantic-ui-react';
+import { Grid, GridColumn, GridRow, Header } from 'semantic-ui-react';
 import { Pie, Bar } from 'react-chartjs-2';
 
 class Chart extends Component {
@@ -37,8 +37,13 @@ class Chart extends Component {
     return (
       <Grid>
       <GridRow>
+          <Header
+            content='Mood Analytics'
+            size='huge'
+            style={{ fontSize: 35 }}
+          />
         <GridColumn width={16}>
-        <Pie
+          <Pie
             data={{
               labels: ['happy', 'good', 'so-so', 'anxious', 'sad', 'angry'],
               datasets: [
