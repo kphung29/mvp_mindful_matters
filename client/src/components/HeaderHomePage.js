@@ -30,7 +30,7 @@ class HomePageHeader extends Component {
         inverted color='grey'
         textAlign='center'
         style={{
-          fontSize: 65,
+          fontSize: 80,
           paddingTop: 30,
           paddingBottom: 30
         }}
@@ -39,7 +39,7 @@ class HomePageHeader extends Component {
       <hr />
       <Header
         as='h2'
-        content={`The goal of Mindful Matters is help you keep track of your mood and shed light into the importance of one's mental health!`}
+        content={`The goal of Mindful Matters is help you keep track of your mood and shed light into the importance of mental wellness.`}
         inverted
         inverted color='grey'
         textAlign='center'
