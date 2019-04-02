@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -d --watch",
-    "server": "nodemon server/index.js rs"
+    "server": "nodemon server/index.js rs",
+    "start": "node server/index.js"
   },
   "author": "Kevin Phung",
   "license": "ISC",
