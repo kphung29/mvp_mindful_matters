@@ -23,14 +23,12 @@ class HomePageHeader extends Component {
     return (
     <Segment inverted padded='very'>
       <Header
-        as='h1'
-        size='huge'
-        content='Welcome to Mood Matters'
+        content='Welcome to Mindful Matters'
         inverted
         inverted color='grey'
         textAlign='center'
         style={{
-          fontSize: 80,
+          fontSize: 65,
           paddingTop: 30,
           paddingBottom: 30
         }}
